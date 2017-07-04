@@ -3,6 +3,48 @@
 很遗憾自己在2016年暑假并未完成百度前端技术学院的所有任务，在完成第一个阶段的第六个任务之后就没有再坚持下去。今年暑假决定重新学习一些前端技术，在本文档中描述一些自己学习中遇到的问题，以及一些笔记。在今年的学习中找了一个小伙伴和自己一起学习，可以共同review自己写的代码。
 
 -------
+## 2017-7-4
+
+### 学习总结
+
+今天完成的是百度前端技术学院任务三，任务三是实现三栏式布局，总的来说不算简单，但是代码量比较小，今天也就得空复习一下单片机。
+
+### 学习笔记
+
+[sticky](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position) 
+盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 flow root（BFC）和 containing block（最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 table 时），该元素定位均不对后续元素造成影响。当元素 B 被粘性定位时，后续元素的位置仍按照 B 未定位时的位置来确定。position: sticky 对 table 元素的效果与 position: relative 相同。
+粘性定位是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。
+
+粘性定位常用于定位字母列表的头部元素。标示 B 部分开始的头部元素在滚动 A 部分时，始终处于 A 的下方。而在开始滚动 B 部分时，B 的头部会固定在屏幕顶部，直到所有 B 的项均完成滚动后，才被 C 的头部替代。
+
+绝对定位脱离文档流，相对于最近的父级元素定位，没有父级元素时间，则相当于根元素定位。
+
+[float](https://developer.mozilla.org/zh-CN/docs/CSS/float)浮动的元素不在正常的文档流中
+
+这个例子中，最简单的清除浮动方式就是给我们想要确保左对齐的新标题元素添加clear属性：
+`h2.secondHeading { clear: both; }`
+然而这个方法只是在同一块级格式化上下文（block formatting context）中没有其他元素的时候才是有效的。如果我们的 H2 有兄弟元素是向左浮动和向右浮动的边栏，那么使用clear 会导致这个标题元素出现在边栏的下方，这显然不是我们期望的结果。
+
+如果不能使用清除浮动，另一种做法是浮动容器的限制块级格式化上下文。再次列举上面的例子，有三个红色的正方形和一个P元素。我们可以设置P元素的overflow属性值变成hidden 或者auto，因为这样可以让容器元素伸展到能够包含红色正方形，而不是让他们超出块元素的底部。
+`p.withRedBoxes { overflow: hidden; height: auto; }`
+
+[实现三栏式布局的主要方法](http://blog.csdn.net/golden_wheat/article/details/61414180)
+
+[清除浮动黑科技完整解读](https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use)
+
+## 2017-7-3
+
+### 学习总结
+
+今天完成了百度ifetask2的任务，主要是对CSS的一些回顾，加深了对CSS的理解。同时在写css代码时又对昨天的代码结构有了新的反思，发现一些地方应该用div标签分割出来，这样便于样式的编排。写css代码是可以首先用*来设置margin和padding避免默认的影响，这样header，footer就可以轻松的占满窗口了。长度值注意百分比长度值的合理使用。
+
+`border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
+box-shadow: 2px 2px 3px #838383;/*设置阴影*/`
+
+### review
+
+time标签语义化time datetime="2008-02-14"
+
 ## 2017-7-2
 
 ### 学习总结
@@ -38,18 +80,6 @@ fixed：表示固定定位，与absolute定位类型类似，但它的相对移�
 
 去掉下划线a{text-decoration:none}
 
-## 2017-7-3
-
-### 学习总结
-
-今天完成了百度ifetask2的任务，主要是对CSS的一些回顾，加深了对CSS的理解。同时在写css代码时又对昨天的代码结构有了新的反思，发现一些地方应该用div标签分割出来，这样便于样式的编排。写css代码是可以首先用*来设置margin和padding避免默认的影响，这样header，footer就可以轻松的占满窗口了。长度值注意百分比长度值的合理使用。
-
-`border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
-box-shadow: 2px 2px 3px #838383;/*设置阴影*/`
-
-### review
-
-time标签语义化time datetime="2008-02-14"
 
 
 
