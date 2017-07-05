@@ -3,6 +3,23 @@
 很遗憾自己在2016年暑假并未完成百度前端技术学院的所有任务，在完成第一个阶段的第六个任务之后就没有再坚持下去。今年暑假决定重新学习一些前端技术，在本文档中描述一些自己学习中遇到的问题，以及一些笔记。在今年的学习中找了一个小伙伴和自己一起学习，可以共同review自己写的代码。
 
 -------
+## 2017-7-5
+
+### 学习笔记
+
+window.open函数的参数表
+![](http://img.mukewang.com/52e3677900013d6a05020261.jpg)
+
+[JavaScript字符串转换成数字的几种方法](http://blog.csdn.net/yjq8116/article/details/3219993/)
+
+[测试addEventListener与onClick的不同](http://blog.csdn.net/rudy24/article/details/52586257)
+
+[onKeyUp 事件](http://www.w3school.com.cn/jsref/event_onkeyup.asp)
+
+[js响应回车事件](http://jingyan.baidu.com/article/60ccbceb67e22764cbb1976a.html)
+
+检查是否非数值：[JavaScript isNaN() 函数](http://www.w3school.com.cn/jsref/jsref_isNaN.asp)
+
 ## 2017-7-4
 
 ### 学习总结

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+</head>
+<body>
+<label>请输入北京今天空气质量：<input id="aqi-input" type="text"></label>
+<button id="button">确认填写</button>
+
+<div>您输入的值是：<span id="aqi-display">尚无录入</span></div>
+<!--测试addEventListener与onClick的不同-->
+<ul id="color-list">
+    <li>我是用来测试addEventListener与onClick的不同的</li>
+    <li id="addEvent">red</li>
+    <li id="on_click">yellow</li>
+</ul>
+<script type="text/javascript">
+    (function() {
+        /*
+         在注释下方写下代码
+         给按钮button绑定一个点击事件
+         在事件处理函数中
+         获取aqi-input输入的值，并显示在aqi-display中
+        */
+        var mystr = document.getElementById("aqi-input");
+        var outstr = document.getElementById("aqi-display");
+        var button = document.getElementById("button");
+        function con1() {
+            var num = parseFloat(mystr.value);
+            if((!isNaN(num)) && (num>=0) && (num<=1000)){
+                outstr.innerText = mystr.value;
+            }else{
+                alert(mystr.value + " 不是有效的AQI数值，请重新输入0-1000的有效整数！");
+            }
+        }
+        //button.onclick = con1; onclick不建议使用
+        button.addEventListener('click',con1);
+        //捕捉回车事件
+        mystr.onkeyup=function (event) {
+            if(event && event.keyCode == 13 ){
+                con1();
+            }
+        }
+    })();
+
+    //测试addEventListener与onClick的不同
+    (function(){
+        var addEvent = document.getElementById("addEvent");
+        addEvent.addEventListener("click",function(){
+            alert("我是addEvent1");
+        },false);
+        addEvent.addEventListener("click",function(){
+            alert("我是addEvent2");
+        },false);
+
+        var addEvent = document.getElementById("on_click");
+        on_click.onclick = function() {
+            alert("我是click1");
+        }
+        on_click.onclick = function() {
+            alert("我是click2");
+        }
+    })();
+</script>
+</body>
+</html>
