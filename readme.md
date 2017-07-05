@@ -12,6 +12,7 @@
 ### 学习笔记
 
 window.open函数的参数表
+
 ![](http://img.mukewang.com/52e3677900013d6a05020261.jpg)
 
 [JavaScript字符串转换成数字的几种方法](http://blog.csdn.net/yjq8116/article/details/3219993/)
@@ -25,27 +26,44 @@ window.open函数的参数表
 检查是否非数值：[JavaScript isNaN() 函数](http://www.w3school.com.cn/jsref/jsref_isNaN.asp)
 
 `(function() {
-	var node_in=document.getElementById("aqi-input");
-	var node_btn=document.getElementById("button");
-	var node_display=document.getElementById("aqi-display");
-	if(node_btn.attachEvent){
-		node_btn.attachEvent("onclick",click);//IE Compatibility
-	}else{
-		node_btn.addEventListener("click",click,false);
-	}
-	function click(){
-		var val=node_in.value.replace( /^(\s|\u00A0)+|(\s|\u00A0)+$/g, "" );//strip blank
-		if(val.length>0){
-			if(node_display.textContent != null){
-				node_display.textContent=val;
-			}else{
-				node_display.innerHTML=val.replace(/[<>]/ig,"");//avoid XSS
-			}
-		}else{
-			alert("Please complete the form!");
-		}
-	}
-})();`
+	var node_in=document.getElementById("aqi-input");`
+	
+	`var node_btn=document.getElementById("button");`
+	
+	`var node_display=document.getElementById("aqi-display");`
+	
+	`if(node_btn.attachEvent){
+		node_btn.attachEvent("onclick",click);//IE Compatibility`
+	`}else{`
+		`node_btn.addEventListener("click",click,false);`
+	
+	`}`
+	
+	`function click(){`
+	
+		`var val=node_in.value.replace( /^(\s|\u00A0)+|(\s|\u00A0)+$/g, "" );//strip blank`
+		
+		`if(val.length>0){`
+		
+			`if(node_display.textContent != null){`
+			
+				`node_display.textContent=val;`
+				
+			`}else{`
+			
+				`node_display.innerHTML=val.replace(/[<>]/ig,"");//avoid XSS`
+				
+			`}`
+			
+		`}else{`
+		
+			`alert("Please complete the form!");`
+			
+		`}`
+		
+	`}`
+	
+`})();`
 此代码中replace用与查找和删除任一空白字符
 
 链接：[JavaScript replace() 方法](http://www.w3school.com.cn/jsref/jsref_replace.asp)
