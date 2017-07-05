@@ -54,6 +54,8 @@ window.open函数的参数表
 
 [trim对应正则下几种写法的区别](http://blog.csdn.net/yenange/article/details/6888424)
 
+[js控制只允许输入数字](http://www.cnblogs.com/xcxc/p/3603921.html)
+
 ## 2017-7-4
 
 ### 学习总结
