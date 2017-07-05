@@ -27,9 +27,9 @@
         var outstr = document.getElementById("aqi-display");
         var button = document.getElementById("button");
         function con1() {
-            var num = parseFloat(mystr.value);
+            var num = parseFloat(mystr.value.trim());//trim是用来去掉空格的
             if((!isNaN(num)) && (num>=0) && (num<=1000)){
-                outstr.innerText = mystr.value;
+                outstr.innerText = mystr.value.trim();
             }else{
                 alert(mystr.value + " 不是有效的AQI数值，请重新输入0-1000的有效整数！");
             }

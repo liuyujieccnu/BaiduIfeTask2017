@@ -5,6 +5,10 @@
 -------
 ## 2017-7-5
 
+### 学习总结
+
+今天在继续学习html与css之前，学习一点JavaScript的相关知识，不至于在后面JavaScript学习时会忘掉前面的HTML+CSS的相关知识，在学习的过程中发现了review高手代码的重要性，可以在这个过程中学到很多的知识。
+
 ### 学习笔记
 
 window.open函数的参数表
@@ -19,6 +23,36 @@ window.open函数的参数表
 [js响应回车事件](http://jingyan.baidu.com/article/60ccbceb67e22764cbb1976a.html)
 
 检查是否非数值：[JavaScript isNaN() 函数](http://www.w3school.com.cn/jsref/jsref_isNaN.asp)
+
+`(function() {
+	var node_in=document.getElementById("aqi-input");
+	var node_btn=document.getElementById("button");
+	var node_display=document.getElementById("aqi-display");
+	if(node_btn.attachEvent){
+		node_btn.attachEvent("onclick",click);//IE Compatibility
+	}else{
+		node_btn.addEventListener("click",click,false);
+	}
+	function click(){
+		var val=node_in.value.replace( /^(\s|\u00A0)+|(\s|\u00A0)+$/g, "" );//strip blank
+		if(val.length>0){
+			if(node_display.textContent != null){
+				node_display.textContent=val;
+			}else{
+				node_display.innerHTML=val.replace(/[<>]/ig,"");//avoid XSS
+			}
+		}else{
+			alert("Please complete the form!");
+		}
+	}
+})();`
+此代码中replace用与查找和删除任一空白字符
+
+链接：[JavaScript replace() 方法](http://www.w3school.com.cn/jsref/jsref_replace.asp)
+
+[空白引用和空白字符](http://www.cnblogs.com/chemdemo/articles/1902070.html)
+
+[trim对应正则下几种写法的区别](http://blog.csdn.net/yenange/article/details/6888424)
 
 ## 2017-7-4
 
