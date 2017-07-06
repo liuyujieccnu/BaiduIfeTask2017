@@ -23,9 +23,29 @@
 
 [JavaScript sort() 方法](http://www.w3school.com.cn/jsref/jsref_sort.asp)
 
-> 使用innerHTML需要注意：如果一个 <div>, <span>, 或 <noembed> 节点具有一个文本子节点,包含字符 (&), (<),  或(>), innerHTML 将这些字符分别返回为＆amp;, ＆lt; 和 ＆gt; 。使用Node.textContent  获取一个这些文本节点内容的正确副本。
+使用innerHTML需要注意的一些东西：[element.innerHTML](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/innerHTML)
 
+```javascript
+var chineseNumbers = ["一","二","三","四","五","六","七","八","九","十"];
+  
+  var contentStr = "";
+  aqiData.filter(function(element){return element[1] > 60;})
+         .sort(function (d1,d2){ return d2[1] - d1[1]; })
+         .forEach(function (element,index){
+    contentStr += "<li>第" + chineseNumbers[index] + "名：" + element[0] + "，" + element[1] + "</li>";    
+  });
+  
+  document.getElementById("aqi-list").innerHTML = contentStr;
+```
+大神的代码，[运用filter() 方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)创建一个新数组，其包含通过所提供函数实现的测试的所有元素，在这里是找出所有大于60的书并保存成一个新数组，然后排序，[forEach() 方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)对数组的每个元素执行一次提供的函数，最后一次性变换innerHTML。
 
+ ```javascript
+ for(var i = 0; i < sortCount.length; i++){
+            aqiList.innerHTML += '<li>第' + (i + 1) + '名：' + sortCount[i][0] + '(样例) , ' + sortCount[i][1] + '</li>';
+        }
+```
+
+这一行代码没有使用appendchild，而是采用了innerHTML直接加标签的方法。
 
 ## 2017-7-5
 
