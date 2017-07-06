@@ -15,9 +15,13 @@
 
 预览demo地址添加前缀 http://htmlpreview.github.io/? eg：今天的两个demo。
 
+哈哈，主页page地址[readme](https://liuyujieccnu.github.io/BaiduIfeTask2017/)
+
 [TASK05](http://htmlpreview.github.io/?https://github.com/liuyujieccnu/BaiduIfeTask2017/blob/master/task5/index.html)
 
 [TASK14](http://htmlpreview.github.io/?https://github.com/liuyujieccnu/BaiduIfeTask2017/blob/master/task14/index.html)
+
+[JavaScript sort() 方法](http://www.w3school.com.cn/jsref/jsref_sort.asp)
 
 ## 2017-7-5
 
@@ -140,8 +144,10 @@ window.open函数的参数表
 
 今天完成了百度ifetask2的任务，主要是对CSS的一些回顾，加深了对CSS的理解。同时在写css代码时又对昨天的代码结构有了新的反思，发现一些地方应该用div标签分割出来，这样便于样式的编排。写css代码是可以首先用*来设置margin和padding避免默认的影响，这样header，footer就可以轻松的占满窗口了。长度值注意百分比长度值的合理使用。
 
-`border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
-box-shadow: 2px 2px 3px #838383;/*设置阴影*/`
+```css
+border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
+box-shadow: 2px 2px 3px #838383;/*设置阴影*/
+```
 
 ### review
 
@@ -158,11 +164,13 @@ time标签语义化time datetime="2008-02-14"
 包含（后代）选择器与子选择器的区别，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“>”进行选择。
 
 标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：
-`p{color:red;} /*权值为1*/
+```css
+p{color:red;} /*权值为1*/
 p span{color:green;} /*权值为1+1=2*/
 .warning{color:white;} /*权值为10*/
 p span.warning{color:purple;} /*权值为1+1+10=12*/
-‘#footer .note p{color:yellow;} /*权值为100+10+1=111*/`
+#footer .note p{color:yellow;} /*权值为100+10+1=111*/
+ ```
 
 !important优先级样式是个例外，权值高于用户自己设置的样式。
 
