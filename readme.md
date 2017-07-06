@@ -23,6 +23,10 @@
 
 [JavaScript sort() 方法](http://www.w3school.com.cn/jsref/jsref_sort.asp)
 
+> 使用innerHTML需要注意：如果一个 <div>, <span>, 或 <noembed> 节点具有一个文本子节点,包含字符 (&), (<),  或(>), innerHTML 将这些字符分别返回为＆amp;, ＆lt; 和 ＆gt; 。使用Node.textContent  获取一个这些文本节点内容的正确副本。
+
+
+
 ## 2017-7-5
 
 ### 学习总结
