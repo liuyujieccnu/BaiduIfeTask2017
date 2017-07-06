@@ -11,6 +11,36 @@
 
 ### 学习笔记
 
+[Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
+[Centering in CSS: A Complete Guide：完整讨论了不同情况下的居中方案，建议自己思考之后再看答案](https://css-tricks.com/centering-css-complete-guide/)
+
+[CSS3 :nth-child() 选择器](http://www.w3school.com.cn/cssref/selector_nth-child.asp)
+
+绝对定位元素需要至少一个祖先元素设置了相对定位（绝对定位），不然元素定位会相对于页面的主体进行定位。
+
+[CSS伪类/伪元素](http://www.w3school.com.cn/css/css_pseudo_elements.asp)
+
+根据上下文，清除浮动更好的方法是clearfix技巧。参见：[定位详解](http://www.w3cplus.com/css/advanced-html-css-lesson2-detailed-css-positioning.html)
+
+```css
+.box-set:before,
+.box-set:after {
+  content: "";
+  display: table;
+}
+.box-set:after {
+  clear: both;
+}
+.box-set {
+  *zoom: 1;
+}
+```
+
+浮动可以用“clear：both”来清除，但是这样并不利于语义化。
+
+
+
 window.open函数的参数表
 
 ![](http://img.mukewang.com/52e3677900013d6a05020261.jpg)
