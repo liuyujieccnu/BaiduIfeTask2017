@@ -11,6 +11,14 @@
 
 紧接着完成了任务14，可悲的我居然连冒泡排序法都忘记了，傻。不过还是蛮开心，一个人顺顺利利的将这几行代码写完了，也是蛮开心。赶紧去提交一下，接下来需要review大神们的代码了。
 
+### 学习笔记
+
+预览demo地址添加前缀 http://htmlpreview.github.io/? eg：今天的两个demo。
+
+[TASK05](http://htmlpreview.github.io/?https://github.com/liuyujieccnu/BaiduIfeTask2017/blob/master/task5/index.html)
+
+[TASK14](http://htmlpreview.github.io/?https://github.com/liuyujieccnu/BaiduIfeTask2017/blob/master/task14/index.html)
+
 ## 2017-7-5
 
 ### 学习总结
