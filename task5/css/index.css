@@ -1,0 +1,194 @@
+/*部分整体样式*/
+body{
+    background-color: #dddddd;
+    margin: 60px 0px 0px 0px;
+    font: 14px sans-serif;
+    overflow: auto;
+    min-width: 800px;
+}
+
+.keyboard{
+    width: 300px;
+    height: 240px;
+}
+
+.content{
+    margin-right: 430px;
+}
+
+.main{
+    overflow: hidden;
+}
+
+
+
+/*顶部效果*/
+.head{
+    min-width: 800px;
+    background-color:#363636;
+    margin: 0;
+    height: 60px;
+    width: 100%;
+    top:0px;
+    left: 0px;
+    position: fixed;
+}
+.head img{
+    background-color: #363636;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+.head ul{
+    display: inline;
+}
+.head li{
+    float: right;
+    margin-right: 30px;
+    margin-top: 18px;
+}
+.head li>a{
+    font: 12px sans-serif;
+    display: block;
+    color: #fff;
+    text-decoration:none;
+}
+
+/*文章的总体样式*/
+.article{
+    border: 1px solid #cbcbcb;
+    background-color: #fff;
+    padding: 30px 28px 40px 20px;
+    margin:20px 20px 20px 20px;
+    box-shadow: 2px 2px 3px #838383;
+}
+
+h2{
+    font:22px sans-serif bold;
+}
+
+h3{
+    font:16px sans-serif bold;
+    color: #656565;
+}
+
+address{
+    font:12px sans-serif;
+    color: #656565;
+}
+
+p{
+    text-indent: 2em;
+}
+
+/*图片文章样式*/
+#piclist1>li{
+    border: 1px solid #cdcdcd;
+    width: 100px;
+    height: 104px;
+    margin-bottom: 16px;
+    padding: 10px;
+    display: inline-block;
+}
+
+#piclist1 a{
+    display: block;
+    text-align: center;
+    margin-bottom: -16px;
+}
+
+#piclist1 img{
+    width: 100px;
+    height: 80px;
+}
+
+/*表格文章样式*/
+#ol1{
+    font-weight: bold;
+}
+
+#table1{
+    width:100%;
+    font-size: 12px;
+    border-collapse: collapse;/*设置表格的边框被合并为一个单一的边框*/
+}
+
+#table1 th{
+    height: 24px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+}
+
+#table1 tr td{
+    height: 24px;
+    border:1px solid #ccc;
+}
+
+#lastline{
+    background-color: #ccc;
+}
+
+/*侧边栏的样式*/
+.sidebar{
+    border: 1px solid #cbcbcb;
+    background-color: #fff;
+    padding: 30px 28px 40px 20px;
+    margin:20px 20px 20px 20px;
+    box-shadow: 2px 2px 3px #838383;
+    float:right;
+    width: 360px;
+}
+
+.sidebar h2{
+    font:14px sans-serif;
+    font-weight: bold;
+    height: 38px;
+    border-left: 3px solid #ccc;
+    padding-left: 12px;
+    line-height: 38px;
+}
+
+.sidebar div{
+    margin: 14px;
+}
+
+.sidebar .tips{
+    width: 35%;
+    float: left;
+    text-align: right;
+    padding-right: 14px;
+}
+
+.sidebar div p{
+    margin-left: 34.2%;
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.sidebar div textarea{
+    width: 55%;
+    height: 100px;
+}
+
+#submitbutton1{
+    width: 100%;
+    height: 38px;
+    color: #fff;
+    background-color: #4156cc;
+    border-radius: 10px;
+    border-style: none;
+}
+
+/*底部样式*/
+footer{
+    height: 70px;
+    width: 100%;
+    background-color: #000;
+}
+
+footer p{
+    text-align: center;
+    color: #fff;
+    line-height: 70px;
+}
