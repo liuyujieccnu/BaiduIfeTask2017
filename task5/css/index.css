@@ -18,6 +18,8 @@ body{
 
 .main{
     overflow: hidden;
+    /*width:100%;*/
+    position: relative;
 }
 
 
@@ -138,6 +140,9 @@ p{
     box-shadow: 2px 2px 3px #838383;
     float:right;
     width: 360px;
+    position: absolute;
+    right: 0;
+    top:0;
 }
 
 .sidebar h2{
