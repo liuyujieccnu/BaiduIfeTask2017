@@ -3,12 +3,61 @@
 很遗憾自己在2016年暑假并未完成百度前端技术学院的所有任务，在完成第一个阶段的第六个任务之后就没有再坚持下去。今年暑假决定重新学习一些前端技术，在本文档中描述一些自己学习中遇到的问题，以及一些笔记。在今年的学习中找了一个小伙伴和自己一起学习，可以共同review自己写的代码。
 
 -------
+## 2017-7-8
+
+### 学习总结
+
+首先今天自己重写了一遍昨天task14的代码，可以说是有了很大的进步了，基本上自己重建出来了，今天的主要任务是继续改进代码，寻求更高效简洁的解决方案。不要一味的最求快速解决问题，学习就是要在解决问题的过程中，学到更多的内容，更好的解决方案。
+
+顺便说一下，今天闲着无聊看了一下[阮一峰的博客](http://www.ruanyifeng.com/home.html)，感觉真的是个好东西。虽然以前也知道阮一峰是一个大神，但是都没有好好去看过他的博客，从技术到人生都有体悟。
+
+### 学习笔记
+
+* [JavaScript match() 方法](http://www.w3school.com.cn/jsref/jsref_match.asp)
+* [JavaScript RegExp 对象](http://www.w3school.com.cn/jsref/jsref_obj_regexp.asp)
+* [正则表达式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+
+一段检索代码如下
+
+```javascript
+var data = [];
+function getData() {
+  var originlist = document.getElementById('source').getElementsByTagName('li');
+  for (var i = 0; i < originlist.length; i++) {
+    var city = originlist[i].innerText.match(/(.*?)空气/)[1];
+    var num = originlist[i].getElementsByTagName('b')[0].innerText;
+    data[i]=[];
+    data[i].push(city);
+    data[i].push(num);
+    /*data.push([city[i],num[i]]);*/
+  }
+```
+
+别人写的，数字和汉字之间的转换代码，hin有趣，记录一下
+
+```javascript
+function transfer(num) {
+		var input = String(num);
+		var unit = ["", "十", "百", "千", "万", "十", "百", "千", "亿"];
+		var chineseNum = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+		var l = input.length;
+		var a = [];
+		var b = [];
+		var result = "";
+		for (var i = 0; i < l; i++) {
+			a[i] = input.substr(i, 1);
+			b[i] = chineseNum[a[i]];
+			result += b[i] + unit[l - i - 1];
+		}
+		return result;
+	}
+```
 
 ## 2017-7-7
 
 ### 学习总结
 
-学习的约深入，越发现自己记录笔记，以及看别人的代码和笔记的重要性，在每天完成相应任务的同时，还应该去看看别人的笔记和代码。
+学习的越深入，越发现自己记录笔记，以及看别人的代码和笔记的重要性，在每天完成相应任务的同时，还应该去看看别人的笔记和代码。
 
 ### 学习笔记
 
@@ -30,6 +79,10 @@
     width: 200px;
 }
 ```
+
+返回节点的子元素：[ParentNode.children](https://developer.mozilla.org/zh-CN/docs/Web/API/ParentNode/children)
+
+[区别Node.childNodes](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/childNodes)：Node.childNodes 返回包含指定节点的子节点的集合，该集合为即时更新的集合（live collection）。
 
 ## 2017-7-6
 
@@ -67,7 +120,7 @@ var chineseNumbers = ["一","二","三","四","五","六","七","八","九","十
 ```
 大神的代码，[运用filter() 方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)创建一个新数组，其包含通过所提供函数实现的测试的所有元素，在这里是找出所有大于60的书并保存成一个新数组，然后排序，[forEach() 方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)对数组的每个元素执行一次提供的函数，最后一次性变换innerHTML。
 
- ```javascript
+```javascript
  for(var i = 0; i < sortCount.length; i++){
             aqiList.innerHTML += '<li>第' + (i + 1) + '名：' + sortCount[i][0] + '(样例) , ' + sortCount[i][1] + '</li>';
         }
@@ -180,10 +233,13 @@ window.open函数的参数表
 [float](https://developer.mozilla.org/zh-CN/docs/CSS/float)浮动的元素不在正常的文档流中
 
 这个例子中，最简单的清除浮动方式就是给我们想要确保左对齐的新标题元素添加clear属性：
+
 `h2.secondHeading { clear: both; }`
+
 然而这个方法只是在同一块级格式化上下文（block formatting context）中没有其他元素的时候才是有效的。如果我们的 H2 有兄弟元素是向左浮动和向右浮动的边栏，那么使用clear 会导致这个标题元素出现在边栏的下方，这显然不是我们期望的结果。
 
 如果不能使用清除浮动，另一种做法是浮动容器的限制块级格式化上下文。再次列举上面的例子，有三个红色的正方形和一个P元素。我们可以设置P元素的overflow属性值变成hidden 或者auto，因为这样可以让容器元素伸展到能够包含红色正方形，而不是让他们超出块元素的底部。
+
 `p.withRedBoxes { overflow: hidden; height: auto; }`
 
 [实现三栏式布局的主要方法](http://blog.csdn.net/golden_wheat/article/details/61414180)
@@ -216,13 +272,14 @@ time标签语义化time datetime="2008-02-14"
 包含（后代）选择器与子选择器的区别，子选择器（child selector）仅是指它的直接后代，或者你可以理解为作用于子元素的第一代后代。而后代选择器是作用于所有子后代元素。后代选择器通过空格来进行选择，而子选择器是通过“>”进行选择。
 
 标签的权值为1，类选择符的权值为10，ID选择符的权值最高为100。例如下面的代码：
+
 ```css
 p{color:red;} /*权值为1*/
 p span{color:green;} /*权值为1+1=2*/
 .warning{color:white;} /*权值为10*/
 p span.warning{color:purple;} /*权值为1+1+10=12*/
 #footer .note p{color:yellow;} /*权值为100+10+1=111*/
- ```
+```
 
 !important优先级样式是个例外，权值高于用户自己设置的样式。
 
