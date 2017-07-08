@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#tabs{
+    display: inline-block;
+    width: 300px;
+    padding:5px;
+    height:150px;
+    margin:20px;
+}
+
+#tabs ul{
+    list-style:none;
+    display: block;
+    height:30px;
+    line-height:30px;
+    border-bottom:2px saddlebrown solid;
+    padding-left: 5px;
+}
+
+#tabs ul li{
+    display: inline-block;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    height: 28px;
+    line-height:28px;
+}
+
+#tabs ul li.on{
+    border-top:2px saddlebrown solid;
+    background-color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+#tabs div{
+    height:120px;
+    line-height: 25px;
+    border:1px solid #336699;
+    border-top:none;
+    padding:5px;
+}
+
+.hide{
+    display: none;
+}
