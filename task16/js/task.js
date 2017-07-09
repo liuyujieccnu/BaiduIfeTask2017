@@ -11,6 +11,7 @@
  */
 var aqiData = new Array;
 var table = document.getElementById("aqi-table");
+
 /**
  * 从用户输入中获取数据，向aqiData中增加一条数据
  * 然后渲染aqi-list列表，增加新增的数据
@@ -22,9 +23,15 @@ function addAqiData(){
         alert("城市名称请输入中文或者英文字符");
         return;
     }
-    if (!strNum.match(/^\d+$/)) {
-        alert("空气质量请输入整数");
+    if ((!strNum.match(/^\d+$/))||(Number(strNum))>500||(Number(strNum))<0) {
+        alert("空气质量请输入0~500整数");
         return;
+    }
+    for(var i=0;i<aqiData.length;i++){
+        if(strCity===aqiData[i][0]){
+            alert("该城市已存在，请勿重复添加！");
+            return;
+        }
     }
     aqiData.push([strCity,Number(strNum)]);
 }
@@ -34,9 +41,11 @@ function addAqiData(){
  */
 function renderAqiList() {
     table.innerHTML = "";
-    if(table.childElementCount===0){
+    if( table.childElementCount===0 && aqiData.length!=0 ){
         var thStr = "<tr>"+"<td>"+"城市"+"</td>"+"<td>"+"空气质量"+"</td>"+"<td>"+"操作"+"</td>"+"</tr>";
         table.innerHTML=thStr;
+        table.firstChild.style.color="#fff";
+        table.firstChild.style.backgroundColor="#000";
     }
     for(var i=0;i<aqiData.length;i++){
         var tr=table.appendChild(document.createElement("tr"));
@@ -89,6 +98,11 @@ function init() {
             delBtnHandle(event.target);
         }
     });
+    document.getElementById("aqi-value-input").onkeyup=function (event) {
+        if(event && event.keyCode == 13 ){
+            addBtnHandle();
+        }
+    }
 
 }
 
