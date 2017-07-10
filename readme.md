@@ -9,12 +9,16 @@
 
 今天首先回顾一下昨天IMOOC任务的代码，虽然简单，但是还是看见了其中几个值得注意的地方，譬如this在JavaScript中的应用以及index作为索引的应用。要弄秦楚为什么直接li[i]在函数中不起作用。
 
+要注意细节，今天早上就是因为没有注意JavaScript代码应该放的位置这个细节导致出错。要渲染除了部件，JavaScript代码才能够正确的执行。
+
 ### 学习笔记
 
 * [JavaScript中的this](this)
 * [index() 方法](http://www.w3school.com.cn/jquery/dom_element_methods_index.asp)
-* 
-
+* [target 事件属性](http://www.w3school.com.cn/jsref/event_target.asp)：target 事件属性可返回事件的目标节点（触发该事件的节点），如生成事件的元素、文档或窗口。
+* [Node.nodeName](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/nodeName)：返回当前节点的节点名称。[！注意：这个是返回的值是大写的]
+* onKeyUp 事件：onkeyup 事件会在键盘按键被松开时发生。
+* [JavaScript Array 对象](http://www.w3school.com.cn/jsref/jsref_obj_array.asp) ！注意其中操作数组的方法
 
 ## 2017-7-8
 

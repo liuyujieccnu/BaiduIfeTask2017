@@ -18,7 +18,7 @@ var table = document.getElementById("aqi-table");
  */
 function addAqiData(){
     var strCity = document.getElementById("aqi-city-input").value.trim();
-    var strNum = document.getElementById("aqi-value-input").value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g, "");
+    var strNum = document.getElementById("aqi-value-input").value.replace(/^(\s|\u00A0)+|(\s|\u00A0)+$/g,"");
     if(!strCity.match(/^[A-Za-z\u4E00-\u9FA5]+$/)){
         alert("城市名称请输入中文或者英文字符");
         return;
@@ -89,12 +89,11 @@ function delBtnHandle(tar) {
 }
 
 function init() {
-
     // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
     document.getElementById("add-btn").addEventListener("click",addBtnHandle);
     // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
     table.addEventListener("click",function (event) {
-        if(event.target&&event.target.nodeName==="BUTTON"){
+        if(event.target && event.target.nodeName==="BUTTON"){
             delBtnHandle(event.target);
         }
     });
@@ -103,7 +102,6 @@ function init() {
             addBtnHandle();
         }
     }
-
 }
 
 init();
