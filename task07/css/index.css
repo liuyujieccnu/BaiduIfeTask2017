@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: "Microsoft YaHei", "sans-serif";
 }
 
 body{
@@ -33,7 +34,6 @@ header{
     height: 31px;
     line-height: 31px;
     display: inline-block;
-    font-family: "Heiti SC","sans-serif";
     font-size: 21px;
     color: #393a3a;
     margin-left: 12px;
@@ -56,7 +56,6 @@ nav ul li{
     text-align: center;
     color: #787b83;
     font-size: 14px;
-    font-family: "Microsoft YaHei","sans-serif";
     line-height: 51px;
 }
 
@@ -94,7 +93,6 @@ nav li:hover{
     height: 55px;
     line-height: 55px;
     font-size: 14px;
-    font-family: "Microsoft YaHei","sans-serif";
     color: #e74f4d;
     margin-left: 5px;
 }
@@ -133,7 +131,7 @@ nav li:hover{
 }
 
 .section1 .slogan_en{
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-size: 60px;
     color: #fff;
     display: inline-block;
@@ -144,7 +142,7 @@ nav li:hover{
 }
 
 .section1 .slogan_cn{
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-size: 21px;
     font-weight: lighter;
     line-height: 32px;
@@ -164,7 +162,7 @@ nav li:hover{
     width: 331px;
     height: 65px;
     background-color: #e74f4d;
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-size: 30px;
     font-weight: lighter;
     text-align: center;
@@ -202,7 +200,7 @@ nav li:hover{
 .section2 div p{
     display: inline-block;
     width: 154px;
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-size: 14px;
     color: #767777;
 }
@@ -226,7 +224,7 @@ nav li:hover{
 }
 
 .section3 div{
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-size: 54px;
     color: #a1a1a1;
     margin-top: 43px;
@@ -260,7 +258,7 @@ nav li:hover{
 
 .section4 .search{
     text-align: center;
-    font-family: "Microsoft YaHei", "sans-serif";
+    
     font-weight: lighter;
     font-size: 21px;
     color: #fff;
@@ -280,12 +278,71 @@ nav li:hover{
 .section4 .info{
     text-align: center;
     font-size: 12px;
-    font-family: "Microsoft YaHei", "sans-serif";
     color: #fff;
     font-weight:lighter ;
     position: relative;
     top: 51px;
 }
+
+.section4 form{
+    position: relative;
+    top: 102px;
+}
+
+.section4 select{
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    appearance:none;
+
+    width: 236px;
+    height: 36px;
+    border: 1px #e2d5cf solid;
+    border-radius: 0px ;
+
+    background-color:#fff;
+    background-image: url("../img/drop.png");
+    background-repeat: no-repeat;
+    background-position:208px center;
+    color: #a8aaaa;
+    font-size: 12px;
+    letter-spacing: 2px;
+    padding-left: 12px;
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: lighter;
+}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+.section4 select::-ms-expand {
+    display: none;
+}
+
+/*.section4 .country option{
+    width: 236px;
+    height: 25px;
+    background-color: #e4e3e5;
+    color: #a8aaaa;
+    font-size: 12px;
+}*/
+
+.section4 button{
+    width: 236px;
+    height: 36px;
+    color: #fff;
+    background-color: #be4e48;
+    letter-spacing: 26px;
+    padding-left: 26px;
+    font-size: 12px;
+    text-align: center;
+    border: none;
+    font-weight: lighter;
+}
+
+.section5{
+    height: 605px;
+    background-color: #f7f7f7;
+}
+
 
 
 
