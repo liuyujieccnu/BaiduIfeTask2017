@@ -1,0 +1,434 @@
+body{
+    width: 892px;
+    margin: 0 auto;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*顶部*/
+header{
+    height: 61px;
+    border-bottom: #938e8c solid 2px;
+}
+.mark{
+    display: inline-block;
+    height: 100%;
+    width: 110px;
+    background-color: #d45d5c;
+
+}
+.mark p{
+    color: #fff;
+    font-family: "Heiti SC";
+    font-size: 12px;
+    padding-left: 6px;
+    padding-top: 46px;
+}
+.data{
+    display: inline-block;
+    font-family: "Heiti SC";
+    font-size: 12px;
+    color: #d45d5c;
+    float: right;
+    padding-top:46px;
+}
+
+/*左上大图*/
+.upleftlarge{
+    display: inline-block;
+    margin-top: 34px;
+    width: 641px;
+    height: 301px;
+    background-image: url("img/upleftlarge.png");
+}
+.maskG{
+    display: inline-block;
+    float: left;
+    background-color: rgba(66,140,89,0.5);
+    width: 191px;
+    height: 100%;
+}
+.maskR{
+    display: inline-block;
+    float: right;
+    background-color: rgba(204,117,128,0.5);
+    width: 191px;
+    height: 100%;
+}
+
+/*右上部分内容*/
+.rightupcontent{
+    width: 203px;
+    height: 301px;
+    float: right;
+    border-top: #cc8091 solid 2px;
+    margin-top: 35px;
+}
+.ruc{
+    margin-top: 13px;
+}
+.rucm{
+    display: inline-block;
+    font-size: 16px;
+    color: #000;
+    font-family: "Microsoft YaHei";
+    border: 1px;
+    border-bottom: solid 1px #000;
+    margin-bottom: 6px;
+}
+.rucm span{
+    font-size: 22px;
+}
+.ruc p{
+    font-size: 12px;
+    font-style: italic;
+    font-family: "Kaiti SC";
+    color: #676767;
+    line-height: 10px;
+}
+.rightupmiddle{
+    margin-top: 40px;
+    font-size: 116px;
+    color: #75b86b;
+    font-family: "Microsoft YaHei";
+    font-style: italic;
+}
+.rightupbottom{
+    position: relative;
+    height: 47px;
+    width: 100%;
+    top: 8px;
+}
+.rub{
+    display: inline-block;
+    float: left;
+    font-size: 55px;
+    font-family: "Microsoft YaHei";
+    color: #cc8091;
+}
+.rub1{
+    display: inline-block;
+    font-size: 21px;
+    font-family: "Microsoft YaHei";
+    color: #cc8091;
+    padding-bottom: 0px;
+    position: absolute;
+    bottom: 10px;
+}
+.rub2{
+    display: inline-block;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    color: #cc8091;
+    position: absolute;
+    bottom: 0;
+}
+
+/*中部段落文字*/
+.mart{
+    margin-top: 42px;
+    position: relative;
+}
+.container1{
+    display: inline-block;
+    width: 227px;
+    text-align: justify;
+}
+.container1>p{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 16px;
+    color: #231815;
+    opacity: 0.7;
+
+}
+.container1>.t1{
+    font-size: 16px ;
+    color: #418c59;
+    font-family: "Microsoft YaHei";
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.container2{
+    display: inline-block;
+    width: 203px;
+    text-align: justify;
+    margin-left: 29px;
+}
+.container2>p{
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 16px;
+    color: #231815;
+    opacity: 0.7;
+}
+.container2>.t2{
+    font-size: 16px ;
+    color: #d2994f;
+    font-family: "Microsoft YaHei";
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.container3{
+    display: inline-block;
+    width: 132px;
+    margin-left: 29px;
+    padding-top: 0;
+    position: relative;
+    bottom: 86px;
+}
+.container3>p{
+    font-family: "Microsoft YaHei";
+    line-height: 21px;
+    font-size: 12px;
+    color: #231815;
+    opacity: 0.7;
+}
+.container3>.t3{
+    font-size: 16px;
+    color: #cc7680;
+    font-family: "Microsoft YaHei";
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+.container4{
+    display: inline-block;
+    padding-top: 0;
+    position: relative;
+    right: 135px;
+}
+.container4>p{
+    font-family: "Microsoft YaHei";
+    line-height: 21px;
+    font-size: 12px;
+    color: #231815;
+    opacity: 0.7;
+}
+.container4>p>span{
+    color: #cd4a48;
+    font-style: italic;
+}
+
+/*左下部分文字*/
+.lba{
+    margin-top: 69px;
+    position: relative;
+    width: 415px;
+    display: inline-block;
+}
+.lbal{
+    height: auto;
+    width: 415px;
+    border-bottom: #11456b 2px solid;
+}
+.lbal .en{
+    font-size: 42px;
+    color: #11456b;
+    font-weight: bold;
+    font-family: "Heiti SC";
+    margin-bottom: 12px;
+}
+.lbal .en span{
+    font-size: 72px;
+    font-family: "Heiti SC";
+    color: #f5e327;
+    font-style: italic;
+    font-weight: bold;
+}
+.lbal .zh{
+    font-size:33px;
+    color: #11456b;
+    font-weight: bold;
+    font-family: "Heiti SC";
+    padding-bottom: 16px;
+}
+.lbc{
+    margin-top: 24px;
+}
+.lbc .fws{
+    font-size: 70px;
+    color: #f5e327;
+    font-family: "Microsoft YaHei";
+    float: left;
+}
+.lbc .lbcon{
+    text-align: justify;
+    font-size: 12px;
+    font-family: "Songti SC";
+    color: #767777;
+    line-height: 16px;
+}
+.lbc .lbcon .ind{
+    text-indent: 2em;
+}
+.lbc img{
+    float: right;
+    padding:15px 0 15px 15px;
+}
+
+/*右下部分图文*/
+.rbc{
+    display: inline-block;
+    margin-left: 14px;
+    width: 459px;
+    height: 608px;
+    float: right;
+    margin-top: 69px;
+}
+.rbc_up{
+    width: 458px;
+    height: 275px;
+    position: relative;
+}
+.rbc_up img{
+    width: 458px;
+    height: 275px;
+}
+.maskGRAY{
+    width: 458px;
+    height: 61px;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    bottom: 0;
+}
+.maskGRAY .con{
+    height: 44px;
+    border-left: 3px #72b16a solid;
+    margin-left: 38px;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding-left: 12px;
+    line-height: 44px;
+    font-size: 26px;
+    font-family: "Microsoft YaHei";
+    color: #ffffff;
+}
+.maskGRAY .con span{
+    font-size: 12px;
+    color: #72b16a;
+    font-family: "Microsoft YaHei";
+    font-style: italic;
+}
+.rbc_up img{
+    opacity: 0.7;
+}
+.rbc_down{
+    margin-top: 42px;
+    width: 459px;
+    height: 318px;
+    background-color: #eeedd6;
+}
+.rbc_down .rbc_mark{
+    width: 427px;
+    height: 137px;
+    padding-left: 32px;
+    padding-top: 20px;
+}
+.rbc_down .rbc_mark p{
+    line-height: 41px;
+}
+.rbc_down .rbc_mark .mark_one{
+    font-size: 16px;
+    font-family: "Songti SC";
+    color: #5a5b5b;
+
+}
+.rbc_down .rbc_mark .mark_word{
+    font-size: 12px;
+    font-family: "Songti SC";
+    color: #5a5b5b;
+    font-style: italic;
+
+}
+.rbc_down .rbc_mark .triangle{
+    width: 0;
+    height: 0;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom: 10px solid #10456b;
+    display: inline-block;
+}
+.rbc_down .red_block{
+    display: inline-block;
+    width: 260px;
+    height: 160px;
+    background-color: #d45d5c;
+    position: relative;
+}
+.rbc_down .red_block .zero{
+    display: inline-block;
+    font-size: 110px;
+    color: #fff;
+    font-family: "Microsoft YaHei";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-45%);
+    margin-left: 12px;
+}
+.rbc_down .red_block .red_block_word{
+    display: inline-block;
+    height: 86px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-left: #fff 2px solid;
+    margin-left: 78px;
+    padding-left: 9px;
+    padding-top: 7px;
+}
+.rbc_down .red_block .red_block_word p{
+    font-size: 21px;
+    color: #fff;
+    font-family: "Heiti SC";
+    font-style: italic;
+    line-height: 24px;
+}
+.rbc_down .red_block .red_block_word span{
+    font-size: 12px;
+    color: #fff;
+    font-family: "Heiti SC";
+}
+.rbc_down .right_bottom_word{
+    display: inline-block;
+    float: right;
+    width: 161px;
+    height: 113px;
+    padding: 7px 20px 40px 16px;
+}
+.rbc_down .right_bottom_word p{
+    font: 14px "Heiti SC";
+    font-style: italic;
+    color: #5a5b5b;
+    text-align: justify;
+    line-height: 16px;
+}
+.rbc_down .right_bottom_word p span{
+    font: 72px "Heiti SC";
+    color: #d45d5c;
+}
+.rbc_down .right_bottom_word p .quote1{
+    float: left;
+    margin: -18px 10px 0 -40px;
+    height: 30px;
+}
+.rbc_down .right_bottom_word p .quote2{
+    float: right;
+}
+
+/*页脚*/
+.foot{
+    margin-top: 40px;
+    border-top: 1px solid #938e8c;
+    color: #d45d5c;
+    width: 892px;
+    height: 60px;
+    font: 12px "Heiti SC";
+    text-align: right;
+    line-height: 20px;
+}
