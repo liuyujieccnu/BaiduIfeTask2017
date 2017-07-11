@@ -305,7 +305,6 @@ nav li:hover{
     background-position:208px center;
     color: #a8aaaa;
     font-size: 12px;
-    letter-spacing: 2px;
     padding-left: 12px;
     display: inline-block;
     margin-right: 30px;
@@ -343,28 +342,480 @@ nav li:hover{
     background-color: #f7f7f7;
 }
 
+.section5 .activity{
+    display: inline-block;
+    height: 402px;
+    width: 1050px;
+    margin-left: 140px;
+    margin-top: 100px;
+}
 
+.section5 .activity .act{
+    display: inline-block;
+    margin-right: 36px;
+    text-align: center;
+    height: 402px;
+}
 
+.section5 .activity .act div{
+    display: inline-block;
+    padding: 12px 8px;
+    border: 1px #e1e1e1 solid;
+    background-color: #fff;
+}
 
+.section5 .activity .act h3{
+    font-size: 14px;
+    margin-top: 14px;
+}
 
+.section5 .activity .act p{
+    font-size: 12px;
+    margin-top: 12px;
+    color: #9f9f9f;
+}
 
+.section5 .activity .act:hover div{
+    position: relative;
+    top: 53px;
+    cursor: pointer;
+}
 
+.section5 .activity .act:hover h3{
+    position: relative;
+    bottom: 352px;
+    font-size: 20px;
+    letter-spacing: 22px;
+    margin-left: 22px;
+    cursor: pointer;
+}
 
+.section5 .activity .act:hover p{
+    position: relative;
+    bottom: 362px;
+    cursor: pointer;
+}
 
+.section6{
+    position: relative;
+    height: 567px;
+    width: 1281px;
+}
 
+.section6 .pic{
+    position: absolute;
+    display: inline-block;
+    height: 567px;
+    width: 851px;
+}
 
+.section6 img{
+    position: absolute;
+    display: inline-block;
+    z-index: -2;
+}
 
+.section6 .new_cn{
+    color: #fff;
+    z-index: 0;
+    display: inline-block;
+    position: absolute;
+    top:132px;
+    left: 353px;
+    font-size: 50px;
+}
 
+.section6 .new_en{
+    color: #fff;
+    z-index: 0;
+    display: inline-block;
+    position: absolute;
+    font-size: 158px;
+    top: 160px;
+    left: 240px;
+}
 
+.section6 .copy{
+    color: #fff;
+    z-index: 0;
+    top: 350px;
+    left: 350px;
+    font-size: 22px;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+}
 
+.section6 .triangle{
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-top: 30px solid rgba(0,0,0,0);
+    border-bottom: 30px solid rgba(0,0,0,0);
+    border-left: 30px solid rgba(0,0,0,0);
+    border-right: 46px solid #fff;
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    bottom: 268px;
+}
 
+.section6 .article{
+    float: right;
+    display: inline-block;
+    width: 425px;
+    height: 567px;
+}
 
+.section6 .article .content{
+    display: inline-block;
+    text-align: center;
+}
 
+.section6 .article .content .title1{
+    width: 425px;
+    margin-top: 164px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: normal;
+}
 
+.section6 .article .content .title1 img{
+    position: relative;
+    top: 3px;
+}
 
+.section6 .article .content .title1 span{
+    color: #e74f4d;
+}
 
+.section6 .article .content p{
+    display: inline-block;
+    font-size: 12px;
+    color: #aaaaaa;
+    width: 288px;
+    margin-top: 31px;
+    text-align: left;
+    line-height: 31px;
+}
 
+.section6 .article .content button{
+    margin-top: 50px;
+    border: 1px solid  #e74f4d;
+    background-color: #fff;
+    width: 100px;
+    height: 30px;
+    color: #e74f4d;
+}
 
+.section6 .article .content button:hover{
+    color: #fff;
+    background-color: #e74f4d;
+}
 
+.section6 .article .content .tip_group{
+    display: inline-block;
+    margin-left: -18px;
+}
 
+.section6 .article .content .tip{
+    margin-top: 25px;
+    background-color: #fff;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #929293;
+    border-radius: 7px 7px 7px 7px;
+    display: inline-block;
+    margin-left: 14px;
+}
 
+.section6 .article .content #checked{
+    background-color: #929293;
+}
+
+.section7{
+    width: 1281px;
+    height: 521px;
+}
+
+.section7 .content{
+    margin-top: 172px;
+}
+
+.section7 .about_us{
+    width: 426px;
+    display: inline-block;
+    text-align: center;
+    font-size: 21px;
+    line-height: 30px;
+    height: 521px;
+    background-color: #e74f4d;
+    color: #fff;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.section7 #ab2{
+    margin-left: -5px;
+    background-color: #fff;
+    color: #e74f4d;
+}
+
+.section7 #ab2 .line{
+    border-color: #e74f4d;
+}
+
+.section7 #ab2 button{
+    border-color: #e74f4d;
+    color: #e74f4d;
+}
+
+.section7 #ab1{
+    float: left;
+}
+
+.section7 button{
+    display: block;
+    width: 166px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: lighter;
+    margin-left: 128px;
+    margin-top: 51px;
+    cursor: pointer;
+}
+
+.section7 .line{
+    display: inline-block;
+    width: 32px;
+    height: 17px;
+    border-top: 2px solid #fff ;
+    position: relative;
+    top:22px;
+}
+
+.section7 .s7_pic{
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+
+.section7 .s7_pic .mask{
+    width: 431px;
+    height: 521px;
+    background-color: rgba(4,0,0,0.4);
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.section7 .s7_pic .triangle{
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 32px solid rgba(255,255,255,0);
+    border-bottom: 32px solid rgba(255,255,255,0);
+    border-left: 50px solid #fff;
+    border-right: 32px solid rgba(255,255,255,0);
+    position: absolute;
+    left: 0px;
+    top:247px;
+}
+
+.section8{
+    height: 631px;
+    padding-top: 118px;
+}
+
+.section8 .join_us1{
+    text-align: center;
+    font-size: 21px;
+    color: #323333;
+}
+
+.section8 .line{
+    display: inline-block;
+    width: 32px;
+    height: 17px;
+    border-top: 2px solid #e74f4d;
+    position: relative;
+    top:8px;
+    margin-left: 624px;
+}
+
+.section8 .info{
+    font-size: 12px;
+    line-height: 18px;
+    color: #aaaaaa;
+    text-align: center;
+}
+
+.section8 .documents{
+    margin-top: 106px;
+    margin-left: 139px;
+    display: inline-block;
+}
+
+.section8 .documents .doc{
+    margin-bottom: 39px;
+}
+
+.section8 .documents .doc .a{
+    display: block;
+    font-size: 14px;
+    color: #231815;
+}
+
+.section8 .documents .doc p{
+    margin-top: 27px;
+    font-size: 12px;
+    color: #231815;
+}
+
+.section8 .documents .doc .more{
+    margin-top: 12px;
+    font-size: 12px;
+    color: #231815;
+    margin-left: 229px;
+    cursor: pointer;
+}
+
+.section8 .more img{
+    margin-right: 18px;
+}
+
+.section8 .form{
+    display: inline-block;
+    float: right;
+    margin-right: 120px;
+    margin-top: 106px;
+
+}
+
+.section8 .form input{
+    height: 41px;
+    width: 290px;
+    background-color: #ededef;
+    border: none;
+    color: #231815;
+    font-size: 12px;
+    padding: 0 20px;
+    margin-left: 19px;
+    margin-bottom: 15px;
+}
+
+.section8 .form textarea{
+    padding: 10px 20px;
+    color: #231815;
+    font-size: 12px;
+    border: none;
+    background-color: #ededef;
+    height: 161px;
+    margin-bottom: 15px;
+    margin-left: 19px;
+    width: 644px;
+    resize: none;
+}
+
+.section8 .form button{
+    margin-bottom: 15px;
+    margin-left: 19px;
+    width: 684px;
+    height: 41px;
+    background-color: #ededef;
+    color: #231815;
+    border: none;
+}
+
+.section9{
+    height: 361px;
+    background-color: #32363e;
+    padding-top: 92px;
+}
+
+.section9 .connect{
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+    letter-spacing: 2px;
+}
+
+.section9 p{
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    margin-top: 14px;
+    font-weight: lighter;
+}
+
+.section9 input{
+    width: 411px;
+    height: 41px;
+    background-color: #fff;
+    font-size: 14px;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-left: 384px;
+    border: none;
+}
+
+.section9 button{
+    height: 41px;
+    width: 81px;
+    background-color: #707278;
+    font-size: 15px;
+    letter-spacing: 5px;
+    border: none;
+    margin-left: -5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.section9 .pic{
+    text-align: center;
+    margin-top: 47px;
+    margin-left: 32px;
+}
+
+.section9 .pic img{
+    display: inline-block;
+    margin-right: 32px;
+    cursor: pointer;
+}
+
+footer{
+    height: 59px;
+    background-color: #2f3039;
+}
+
+footer .copy{
+    display: inline-block;
+    font-family: "Songti SC";
+    margin-left: 95px;
+    margin-top: 30px;
+    color: #fff;
+    font-size:12px ;
+}
+
+footer .back_to_top{
+    margin-top: 30px;
+    color: #fff;
+    font-size:12px ;
+    display: inline-block;
+    float: right;
+    margin-right: 44px;
+    cursor: pointer;
+}
+
+footer .back_to_top a{
+    font-family: "Songti SC";
+    color: #fff;
+    text-decoration: none;
+}
