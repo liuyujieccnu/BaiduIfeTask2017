@@ -200,7 +200,6 @@ nav li:hover{
 .section2 div p{
     display: inline-block;
     width: 154px;
-    
     font-size: 14px;
     color: #767777;
 }
@@ -224,7 +223,6 @@ nav li:hover{
 }
 
 .section3 div{
-    
     font-size: 54px;
     color: #a1a1a1;
     margin-top: 43px;
@@ -293,12 +291,10 @@ nav li:hover{
     -webkit-appearance: none;
     -moz-appearance:none;
     appearance:none;
-
     width: 236px;
     height: 36px;
     border: 1px #e2d5cf solid;
     border-radius: 0px ;
-
     background-color:#fff;
     background-image: url("../img/drop.png");
     background-repeat: no-repeat;

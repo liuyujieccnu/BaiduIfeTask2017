@@ -3,6 +3,89 @@
 很遗憾自己在2016年暑假并未完成百度前端技术学院的所有任务，在完成第一个阶段的第六个任务之后就没有再坚持下去。今年暑假决定重新学习一些前端技术，在本文档中描述一些自己学习中遇到的问题，以及一些笔记。在今年的学习中找了一个小伙伴和自己一起学习，可以共同review自己写的代码。
 
 -------
+## 2017-7-16
+
+### 学习总结
+
+玩玩没想到再一次打开这个文档写笔记是7月16号了，怕是有好些天没有更新了，14号考试，13号复习，12号实验考试，主要更新了写thoughtworks的内容，今天从新开始更新百度ife，task7的笔记开始。代码写的还不够多，还是记不住某些整体的东西可以在*中设置，降低代码的复杂程度。
+
+带头图的第一部分position: absolute与z-index来共同实现，但是有一点点实践中的新发现z-index为0似乎是目前，以及这个div块以外部分的默认值，z-index为正值一些东西始终浮与其他模块的上方。
+
+加入letter-spacing字符的text-align居中方式可能会出现偏差，采取的解决方案是，计算再次使他居中。都是采取使得字符段向右缩进spacing的长度来实现的方式，float、text-indent、margin等方式来实现。
+
+白色直线的实现可以采用一个div然后设置border的方式。
+
+第五部分变换采用的是relative的方式，但是在实际的实现中，对齐方式要出现变化，absolute似乎是一种更可行的方法，但是需要写更多的代码。
+
+第6、7部分主要是白色三角形的实现，在这里白色三角的实现是在相邻的div中构建的，具体三角形形状的实现靠的是border的方法，关于具体参见笔记，重温CSS：Border属性。但是在同一个div中使用：after伪元素然后用-margin的形式实现似乎在临近的div中会出现被覆盖的情况。
+
+### 学习笔记
+
+* 两栏布局实现另一栏来对齐或者居中（原本是文字及其底部对其），使用float来实现。
+
+```css
+.title{
+    height: 31px;
+    margin-top: 13px;
+    margin-left: 59px;
+    display: inline-block;
+}
+
+.title img{
+    width: 31px;
+    height: 31px;
+    float: left; /*浮动这里实现文字垂直居中的关键*/
+    display: inline-block;
+}
+
+.title h1{
+    height: 31px;
+    line-height: 31px;
+    display: inline-block;
+    font-size: 21px;
+    color: #393a3a;
+    margin-left: 12px;
+}
+```
+
+* 实现红色提示条选中变换的功能，利用权重
+
+```css
+nav:hover li{
+    color: #787b83;
+    border-bottom: none;
+}
+
+nav li:hover{
+    color: #e74f4d;
+    border-bottom: 4px solid #e74f4d;
+    cursor: pointer;
+}
+```
+
+* [CSS cursor 属性](http://www.w3school.com.cn/cssref/pr_class_cursor.asp)
+
+* [用纯css改变下拉列表select框的默认样式](http://ourjs.com/detail/551b9b0529c8d81960000007)：实现中注意一点，解决background-cloro与background-image冲突的问题可以采用
+
+* [重温CSS：Border属性](http://www.2cto.com/kf/201402/280715.html)
+
+* 实现多行输入的固定与不可变大小
+
+```css
+.section8 .form textarea{
+    padding: 10px 20px;
+    color: #231815;
+    font-size: 12px;
+    border: none;
+    background-color: #ededef;
+    height: 161px;
+    margin-bottom: 15px;
+    margin-left: 19px;
+    width: 644px;
+    resize: none;
+}
+```
+
 ## 2017-7-10
 
 ### 学习总结
