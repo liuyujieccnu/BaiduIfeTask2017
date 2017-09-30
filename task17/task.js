@@ -10,7 +10,7 @@ function getDateStr(dat) {
 
 function randomBuildData(seed) {
     let returnData = {};
-    let dat = new Date("2016-05-06");
+    let dat = new Date("2017-01-01");
     let datStr = '';
     for (let i = 1; i < 92; i++) {
         datStr = getDateStr(dat);
@@ -86,7 +86,7 @@ function renderChart() {
         } else if (pageState.nowGraTime === 'month') {
             str = '<p style="margin-top: 3px">' + chartData[pageState.nowSelectCity]['monthStr'][i] + '月<br>' + 'AQI:' + value + '</p>';
         } else if (pageState.nowGraTime === 'week') {
-            str = '<p style="margin-top: 3px">第' + (i + 1) + '周<br>' + 'AQI:' + value + '</p>';
+            str = '<p style="margin-top: 3px">' + chartData[pageState.nowSelectCity]['weekStr'][i].split('-')[0] + '月第' + chartData[pageState.nowSelectCity]['weekStr'][i].split('-')[1] + '周<br>' + 'AQI:' + value + '</p>';
         }
         tipDiv.innerHTML = str;
         tipDiv.setAttribute('style', 'display:none');
@@ -176,6 +176,7 @@ function initAqiChartData() {
     let resData = {};
     for (let index in aqiSourceData) {
         let dStr = [];
+        let wStr = [];
         let mStr = [];
         let day = [];
         let week = [];
@@ -184,7 +185,8 @@ function initAqiChartData() {
         let monthCache = [];
         let monthFlag = -1;
         let weekFlag = -1;
-        let wf = 0;
+        let wf = 1;
+        let firstday = new Date();
         for (let dateStr in aqiSourceData[index]) {
             let item = aqiSourceData[index][dateStr];
             //在day数组中添加每天的AQI数据
@@ -192,6 +194,10 @@ function initAqiChartData() {
             //构建一个日期对象
             let dateArray = dateStr.split("-");
             let date = new Date(dateArray[0], parseInt(dateArray[1] - 1), dateArray[2]);
+            if (monthFlag === -1 && date.getDay() !== 1) {
+                firstday = date;
+                wf = 0;
+            }
             //在week数组中添加每周的AQI数据平均值
             if (date.getDay() === 1 && weekFlag !== -1) {
                 wf += 1;
@@ -204,8 +210,12 @@ function initAqiChartData() {
             if (date.getDate() === 1 && monthFlag !== -1) {
                 month.push(Math.round(monthCache.reduce((total, sum) => total + sum) / monthCache.length));
                 monthCache.splice(0, monthCache.length);
-                wf = 1;
+                if (date.getDay() === 1) {
+                    wf = 1;
+                } else
+                    wf = 0;
             }
+
             monthCache.push(parseInt(item));
             monthFlag = date.getDate();
             //在dStr数组中添加日期的字符串
@@ -214,15 +224,26 @@ function initAqiChartData() {
             if (mStr.indexOf(dateArray[1]) === -1) {
                 mStr.push(dateArray[1]);
             }
+            //在wStr数组中添加周的字符串，例："1-1"表示1月第1周
+            if (wStr.indexOf(dateArray[1] + '-' + wf) === -1) {
+                wStr.push(dateArray[1] + '-' + wf);
+            }
         }
-
         week.push(Math.round(weekCache.reduce((total, sum) => total + sum) / weekCache.length));
         month.push(Math.round(monthCache.reduce((total, sum) => total + sum) / monthCache.length));
+        let weStr = [];
+        weStr.push(wStr[0]);
+        for (let i = 1; i < wStr.length; i++) {
+            if (wStr[i].split('-')[1] !== '0') {
+                weStr.push(wStr[i]);
+            }
+        }
         resData[index] = {
             'day': day,
             'week': week,
             'month': month,
             'date': dStr,
+            'weekStr': weStr,
             'monthStr': mStr
         };
     }
