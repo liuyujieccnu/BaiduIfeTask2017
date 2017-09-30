@@ -10,7 +10,7 @@ function getDateStr(dat) {
 
 function randomBuildData(seed) {
     let returnData = {};
-    let dat = new Date("2016-01-01");
+    let dat = new Date("2016-05-06");
     let datStr = '';
     for (let i = 1; i < 92; i++) {
         datStr = getDateStr(dat);
@@ -34,6 +34,7 @@ let aqiSourceData = {
 
 // 用于渲染图表的数据
 let chartData = initAqiChartData();
+
 
 // 记录当前页面的表单选项
 let pageState = {
@@ -61,18 +62,41 @@ function renderChart() {
     let charDiv = document.createElement('div');
     charDiv.setAttribute('class', 'aqi-chart-wrap');
     formChart.appendChild(charDiv);
+    let i = -1;
     for (let value of chartData[pageState.nowSelectCity][pageState.nowGraTime]) {
+        i++;
         let width = 0;
         if (pageState.nowGraTime === 'day') {
             width = 10;
-        }else if(pageState.nowGraTime === 'week'){
+        } else if (pageState.nowGraTime === 'week') {
             width = 50;
-        }else if(pageState.nowGraTime === 'month'){
+        } else if (pageState.nowGraTime === 'month') {
             width = 200;
         }
+        let height = value * 450 / 500;
         let valueDiv = document.createElement('div');
         valueDiv.setAttribute('class', 'aqi-div-wrap');
-        valueDiv.setAttribute('style', 'background-color:' + color[value % 5] + ';height:' + value + 'px'+';width:' + width + 'px');
+        valueDiv.setAttribute('style', 'background-color:' + color[value % 5] + ';height:' + height + 'px' + ';width:' + width + 'px');
+
+        let tipDiv = document.createElement('div');
+        tipDiv.setAttribute('class', 'aqi-tip-wrap');
+        let str = '';
+        if (pageState.nowGraTime === 'day') {
+            str = '<p style="margin-top: 3px">' + chartData[pageState.nowSelectCity]['date'][i] + '<br>' + 'AQI:' + value + '</p>';
+        } else if (pageState.nowGraTime === 'month') {
+            str = '<p style="margin-top: 3px">' + chartData[pageState.nowSelectCity]['monthStr'][i] + '月<br>' + 'AQI:' + value + '</p>';
+        } else if (pageState.nowGraTime === 'week') {
+            str = '<p style="margin-top: 3px">第' + (i + 1) + '周<br>' + 'AQI:' + value + '</p>';
+        }
+        tipDiv.innerHTML = str;
+        tipDiv.setAttribute('style', 'display:none');
+        valueDiv.appendChild(tipDiv);
+        valueDiv.addEventListener('mouseover', function () {
+            tipDiv.setAttribute('style', 'display:block');
+        });
+        valueDiv.addEventListener('mouseout', function () {
+            tipDiv.setAttribute('style', 'display:none');
+        });
         charDiv.appendChild(valueDiv);
     }
 }
@@ -151,6 +175,8 @@ function initAqiChartData() {
     // 处理好的数据存到 chartData 中
     let resData = {};
     for (let index in aqiSourceData) {
+        let dStr = [];
+        let mStr = [];
         let day = [];
         let week = [];
         let month = [];
@@ -158,15 +184,17 @@ function initAqiChartData() {
         let monthCache = [];
         let monthFlag = -1;
         let weekFlag = -1;
-        for (let dataStr in aqiSourceData[index]) {
-            let item = aqiSourceData[index][dataStr];
+        let wf = 0;
+        for (let dateStr in aqiSourceData[index]) {
+            let item = aqiSourceData[index][dateStr];
             //在day数组中添加每天的AQI数据
             day.push(parseInt(item));
             //构建一个日期对象
-            let dateArray = dataStr.split("-");
+            let dateArray = dateStr.split("-");
             let date = new Date(dateArray[0], parseInt(dateArray[1] - 1), dateArray[2]);
             //在week数组中添加每周的AQI数据平均值
-            if (date.getDay() === 0 && weekFlag !== -1) {
+            if (date.getDay() === 1 && weekFlag !== -1) {
+                wf += 1;
                 week.push(Math.round(weekCache.reduce((total, sum) => total + sum) / weekCache.length));
                 weekCache.splice(0, weekCache.length);
             }
@@ -175,17 +203,27 @@ function initAqiChartData() {
             //在month数组中添加每月的AQI数据平均值
             if (date.getDate() === 1 && monthFlag !== -1) {
                 month.push(Math.round(monthCache.reduce((total, sum) => total + sum) / monthCache.length));
-                monthCache.splice(0, weekCache.length);
+                monthCache.splice(0, monthCache.length);
+                wf = 1;
             }
             monthCache.push(parseInt(item));
             monthFlag = date.getDate();
+            //在dStr数组中添加日期的字符串
+            dStr.push(dateStr);
+            //在mStr数组中添加月的字符串，例："1"表示1月
+            if (mStr.indexOf(dateArray[1]) === -1) {
+                mStr.push(dateArray[1]);
+            }
         }
+
         week.push(Math.round(weekCache.reduce((total, sum) => total + sum) / weekCache.length));
         month.push(Math.round(monthCache.reduce((total, sum) => total + sum) / monthCache.length));
         resData[index] = {
             'day': day,
             'week': week,
-            'month': month
+            'month': month,
+            'date': dStr,
+            'monthStr': mStr
         };
     }
     return resData;
