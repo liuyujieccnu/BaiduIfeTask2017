@@ -98,7 +98,7 @@ function init() {
         }
     });
     document.getElementById("aqi-value-input").onkeyup=function (event) {
-        if(event && event.keyCode == 13 ){
+        if(event && event.keyCode == 13){
             addBtnHandle();
         }
     }
