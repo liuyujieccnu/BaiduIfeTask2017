@@ -24,16 +24,19 @@ function delData(element) {
     alert(value);
 }
 
-function delSpecData(value) {
-    data = data.filter(item => item !== value);
+function delSpecData(element) {
+    data = data.filter((item,index) => index !== Number(element.id));
 }
 
 function render() {
     let mainOut = document.getElementById('main-output');
+    let idNum = 0;
     mainOut.innerHTML = '';
     data.forEach(function (value) {
         let div = document.createElement('div');
         div.setAttribute('class', 'res-div');
+        div.setAttribute('id', idNum.toString());
+        idNum++;
         div.innerText = value;
         mainOut.appendChild(div);
     });
@@ -49,7 +52,7 @@ function main() {
         render();
     });
     document.getElementById('main-output').addEventListener('click', function (event) {
-        delSpecData(event.target.innerHTML);
+        delSpecData(event.target);
         render();
     })
 }
