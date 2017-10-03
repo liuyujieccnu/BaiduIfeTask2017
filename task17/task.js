@@ -10,7 +10,7 @@ function getDateStr(dat) {
 
 function randomBuildData(seed) {
     let returnData = {};
-    let dat = new Date("2017-01-01");
+    let dat = new Date("2017-09-04");
     let datStr = '';
     for (let i = 1; i < 92; i++) {
         datStr = getDateStr(dat);
