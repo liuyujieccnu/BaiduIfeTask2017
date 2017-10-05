@@ -14,8 +14,15 @@
             color: white;
             margin: 0 10px;
             height: 40px;
-            width: 40px;
+            width: 30px;
             line-height: 40px;
+        }
+        #main-output{
+            height: 510px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
         }
     </style>
 </head>
@@ -24,11 +31,14 @@
     <input type="text" id="value-input">
     <div id="input-div"  style="display: inline">
         <button id="left-in">左侧入</button>
-        <button id="right-in">右侧入</button>
+        <button id="right-in" style="margin-left: 10px">右侧入</button>
     </div>
     <div id="output-div" style="display: inline; margin-left: 20px">
         <button id="left-out">左侧出</button>
-        <button id="right-out">右侧出</button>
+        <button id="right-out" style="margin-left: 10px">右侧出</button>
+    </div>
+    <div id="sort-div" style="display: inline; margin-left: 20px">
+        <button id="sort-btn">排序</button>
     </div>
 </div>
 <div id="main-output" class="main">

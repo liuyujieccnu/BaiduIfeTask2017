@@ -56,7 +56,7 @@
           <file leaf-file-name="task.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/task.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
+                <state relative-caret-position="204">
                   <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
                   <folding>
                     <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
@@ -565,11 +565,12 @@
       <workItem from="1506646219399" duration="2106000" />
       <workItem from="1506671195202" duration="34309000" />
       <workItem from="1506953607157" duration="145000" />
+      <workItem from="1507027005279" duration="480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40447000" />
+    <option name="totallyTimeSpent" value="40927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -624,11 +625,48 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <js_state />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+          <folding>
+            <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2645:2660" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2836:2851" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/task.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2645:2660" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2836:2851" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -665,7 +703,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
           <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
-          <folding />
+          <folding>
+            <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2645:2660" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2836:2851" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,7 +715,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
+          <folding>
+            <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2645:2660" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2836:2851" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -748,9 +794,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2261">
-          <caret line="133" column="4" lean-forward="false" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <marker date="1506786790000" expanded="true" signature="2458:2473" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2645:2660" ph="..." />
+            <marker date="1506786790000" expanded="true" signature="2836:2851" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
