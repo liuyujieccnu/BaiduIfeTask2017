@@ -43,3 +43,38 @@
 
 * [JavaScript concat() 方法](http://www.w3school.com.cn/jsref/jsref_concat_array.asp)
 * [JavaScript replace() 方法](http://www.w3school.com.cn/jsref/jsref_replace.asp)
+
+### 代码Review
+
+* [参考代码一](https://github.com/Five-African/task-stage2-final-submission/blob/gh-pages/task20/index.html)
+* [javascript 中关于call方法的详解](http://www.cnblogs.com/f-dream/p/4950918.html)
+
+```JavaScript
+function deal(func, succ) {
+      var args = [].slice.call(arguments, 2);
+      return function(e) {
+        try {
+          var arg = args.map(function(item) {
+            return typeof item === "function" ? item(e) : item;
+          });
+          var result;
+          if (Object.prototype.toString.call(arg[0]) === '[object Array]') {
+            arg[0].forEach(function(d) {
+              result = func.apply(data, [d].concat(arg.slice(1)));
+            });
+          }
+          else {
+            result = func.apply(data, arg)
+          }
+          if (succ != null) {
+            succ(result);
+          }
+        } catch (ex) {
+          if (ex.message != '')
+            alert(ex.message);
+        }
+        render();
+      };
+    }
+```
+
