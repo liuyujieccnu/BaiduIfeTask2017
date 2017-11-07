@@ -70,7 +70,7 @@ function outSort() {
                 data[j] = temp;
             }
         }
-        render(i + 1);
+        render(i);
         i++;
     }, 200);
 }

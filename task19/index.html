@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>baidu ife task 20</title>
+    <style type="text/css">
+        .main {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #value-input {
+            resize: none; /*resize用于规定用户是否可以调整div的大小*/
+        }
+
+        .res-div {
+            display: inline-block;
+            background-color: pink;
+            color: white;
+            margin: 2px 10px;
+            padding: 10px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #main-output {
+            height: 50px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .select {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="main-input" class="main">
+
+    <textarea rows="3" cols="30" id="value-input" placeholder="请在这里输入要插入的文本"></textarea>
+    <!--<input type="text" id="value-input">-->
+
+    <div id="input-div" style="display: inline">
+        <button id="input-btn">插入</button>
+    </div>
+
+    <input type="text" id="query-input" style="margin-left: 40px;width: 160px" placeholder="请在这里输入要查询的文本">
+
+    <div id="output-div" style="display: inline">
+        <button id="query-btn">查询</button>
+    </div>
+
+</div>
+<div id="main-output" class="main">
+</div>
+<script src="index.js"></script>
+</body>
+
+</html>
